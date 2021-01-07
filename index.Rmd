@@ -1,0 +1,24 @@
+---
+title: "Data Products Week 3 Project"
+author: "Diego Martínez"
+date: "7/1/2021"
+output: ioslides_presentation
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE)
+```
+
+## Plot
+
+A plot of the relationship between miles per gallon as a function of the weight of a vehicle
+
+```{r , echo = FALSE, message=FALSE, warning=FALSE}
+library(plotly)
+data(mtcars)
+```
+
+```{r , echo = FALSE, message=FALSE, warning=FALSE}
+plot_ly(mtcars,x=mtcars$wt,y=mtcars$mpg,mode="markers",color=mtcars$wt,width=800,height=300)
+
+```
